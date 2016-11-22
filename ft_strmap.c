@@ -14,22 +14,23 @@
 
 char	*ft_strmap(char const *s, char (*f) (char))
 {
-	size_t		i;
-	size_t		len;
-	char		*str;
+	char	*str;
+	int		i;
 
-	if (s && f)
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (str == NULL)
+		return (NULL);
+	if (str != '\0')
 	{
-		len = ft_strlen(s);
-		str = ft_memalloc(len);
-		i = 0;
-		while (i < len && s[i])
+		while (s[i] != '\0')
 		{
 			str[i] = f(s[i]);
 			i++;
 		}
 		str[i] = '\0';
-		return (str);
 	}
-	return (NULL);
+	return (str);
 }

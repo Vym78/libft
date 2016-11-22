@@ -14,6 +14,8 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	while (*s != '\0')
+	if (s == NULL || f == NULL)
+		return ;
+	while (s != NULL && *s)
 		f(s++);
 }
