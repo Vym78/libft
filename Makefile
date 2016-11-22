@@ -25,7 +25,9 @@ SRCS = 	ft_strlen.c ft_toupper.c ft_tolower.c ft_isprint.c ft_isascii.c \
 		ft_strdel.c ft_striter.c ft_striteri.c ft_strnew.c ft_memalloc.c \
 		ft_strmap.c ft_itoa.c ft_strjoin.c ft_strmapi.c ft_strnequ.c \
 		ft_strequ.c ft_strsplit.c ft_strsub.c ft_strtrim.c ft_lstnew.c \
-		ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
+		ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
+		ft_iscntrl.c ft_isgraph.c ft_islower.c ft_ispunct.c ft_isspace.c \
+		ft_isupper.c ft_isxdigit.c
 
 OBJ = $(SRCS:.c=.o)
 
